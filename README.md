@@ -25,27 +25,27 @@ HeadersCheck is a security audit tool designed to analyze and report on the secu
   pip install requests colorama
   ```
 
-##### Usage
+### **Usage**
 
-Run the script:
+- Run the script:
 
-bash
+  ```bash
+  python headerscheck.py
+  ```
 
-    python headerscheck.py
+- Enter the website URL to analyze.
+- Optional: Enter a cookie if necessary.
 
-Ingresa la URL del sitio web a analizar.
-Opcional: Ingresa una cookie si es necesario.
+The script will display a detailed report of the present and absent headers, along with their level of severity.
 
-El script mostrará un informe detallado de los encabezados presentes y ausentes, junto con su nivel de severidad.
+### **Contributions**
 
-##### ###### ContribucionesContribuciones
+Contributions are welcome. Please, send your pull requests or open issues to discuss possible improvements.
 
-Las contribuciones son bienvenidas. Por favor, envía tus pull requests o abre issues para discutir posibles mejoras.
+### **License**
 
-##### LicenciaLicencia
+This project is licensed under the MIT license..
 
-Este proyecto está licenciado bajo licencia MIT.
-
-##### AutorAutor
+### **Author**
 
 Miguel Ubilla Rocco
