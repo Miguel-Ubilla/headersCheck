@@ -4,8 +4,6 @@
 
 HeadersCheck is a security audit tool designed to analyze and report on the security HTTP headers of a website. Written in Python, this tool classifies and displays security, informational, and cache headers, indicating their presence and level of importance. It now features multilingual support, allowing users to select between English and Spanish for the user interface.
 
-![HeadersCheck](capture.png)
-
 ## **Features**
 
 - **Multilingual Support**: Choose between English and Spanish for the user interface.
@@ -43,6 +41,8 @@ HeadersCheck is a security audit tool designed to analyze and report on the secu
 - Optional: Enter a cookie if necessary. Cookie format: cookie_name=cookie_value
 
 The script will display a detailed report of the present and absent headers, along with their level of severity, in the selected language.
+
+![HeadersCheck](capture.png)
 
 ### **Contributions**
 
