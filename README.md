@@ -1,32 +1,33 @@
 # **HeadersCheck**
 
-#### Descripción
+## **Description**
 
-HeadersCheck es una herramienta de auditoría de seguridad diseñada para analizar y reportar sobre los encabezados HTTP de seguridad de un sitio web. Escrita en Python, esta herramienta clasifica y muestra los encabezados de seguridad, informativos y de caché, indicando su presencia y nivel de importancia.
-Características
+HeadersCheck is a security audit tool designed to analyze and report on the security HTTP headers of a website. Written in Python, this tool classifies and displays security, informational, and cache headers, indicating their presence and level of importance.
 
-    Análisis de Encabezados de Seguridad: Evalúa encabezados comunes como X-XSS-Protection, Strict-Transport-Security, entre otros.
-    Clasificación por Severidad: Los encabezados se marcan en colores según su nivel de importancia: alto, medio o desaprobado.
-    Soporte para Encabezados Informativos y de Caché: Analiza encabezados como Server, Cache-Control, etc.
-    Salida Colorida: Usa Colorama para una salida fácil de leer y visualmente diferenciada.
+## **Features**
 
-##### Requisitos
+- **Security Headers Analysis**: Evaluates common headers like X-XSS-Protection, Strict-Transport-Security, among others.
+- **Severity Classification**: Headers are color-coded according to their level of importance: high, medium, or deprecated.
+- **Support for Informational and Cache Headers**: Analyzes headers like Server, Cache-Control, etc.
+- **Colorful Output**: Uses Colorama for an easy-to-read and visually differentiated output.
 
-Python 3
-Bibliotecas: requests, colorama
+### **Requirements**
 
-##### Instalación
+- Python 3
+- Libraries: requests, colorama
 
-Clona el repositorio o descarga los archivos.
-Instala las dependencias:
+### **Installation**
 
-bash
+- Clone the repository or download the files.
+- Install the dependencies:
 
-    pip install requests colorama
+  ```bash
+  pip install requests colorama
+  ```
 
-##### UsoUso
+##### Usage
 
-Ejecuta el script:
+Run the script:
 
 bash
 
