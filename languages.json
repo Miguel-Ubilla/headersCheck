@@ -3,26 +3,34 @@
     "title": "HeadersCheck - Security Audit Tool",
     "enter_url": "Enter the URL: ",
     "enter_cookie": "Enter the cookie (leave blank if not necessary): ",
-    "security_headers_for": "\nSecurity Headers for ",
-    "informative_headers": "\nInformative Headers:\n",
-    "cache_headers": "\nCache Headers:\n",
+    "security_headers_for": "\n***** Security Headers *****",
+    "informative_headers": "\n***** Informative Headers *****\n",
+    "cache_headers": "\n***** Cache Headers *****\n",
     "error_request": "Error making the request: ",
     "present_headers": "Security Headers present: ",
     "absent_headers": "Security Headers absent: ",
     "select_language": "Select language (en/es): ",
-    "no_present": "NOT PRESENT"
+    "no_present": "NOT PRESENT",
+    "html_tags": "***** HTML Structure *****",
+    "html_tags_error": "Error while retrieving HTML",
+    "site_check": "Analysis for the site: ",
+    "end_check": "********** Report End **********"
   },
   "es": {
     "title": "HeadersCheck - Herramienta de Auditoría de Seguridad",
     "enter_url": "Ingresa la URL: ",
     "enter_cookie": "Ingresa la cookie (puede dejarlo en blanco si no es necesario): ",
-    "security_headers_for": "\nHeaders de seguridad para ",
-    "informative_headers": "\nHeaders Informativos:\n",
-    "cache_headers": "\nHeaders de Cache:\n",
+    "security_headers_for": "\n***** Headers de seguridad *****",
+    "informative_headers": "\n***** Headers Informativos *****\n",
+    "cache_headers": "\n***** Headers de Cache *****\n",
     "error_request": "Error al realizar la solicitud: ",
     "present_headers": "Headers de seguridad presentes: ",
     "absent_headers": "Headers de seguridad ausentes: ",
     "select_language": "Selecciona el idioma (en/es): ",
-    "no_present": "NO PRESENTE"
+    "no_present": "NO PRESENTE",
+    "html_tags": "***** Estructura HTML *****",
+    "html_tags_error": "Error al obtener el HTML",
+    "site_check": "Analisis para el sitio: ",
+    "end_check": "********** Fin del Reporte **********"
   }
 }

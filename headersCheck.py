@@ -96,7 +96,8 @@ def check_security_headers(url, cookie, texts):
     try:
         response = requests.head(url, headers=headers)
 
-        print(Fore.LIGHTBLUE_EX + texts["security_headers_for"] + url + ":\n")
+        print(":\n" + Fore.LIGHTCYAN_EX + texts["site_check"] + url)
+        print(Fore.LIGHTBLUE_EX + texts["security_headers_for"] + "\n")
         for header in security_headers.keys():
             value = response.headers.get(header)
             print(categorize_header(header, value, texts))
@@ -123,7 +124,33 @@ def check_security_headers(url, cookie, texts):
         + "\n--------------------------------------------------------------------"
     )
     print(texts["present_headers"] + Fore.GREEN + f"{present_count}")
-    print(texts["absent_headers"] + Fore.RED + f"{absent_count}")
+    print(texts["absent_headers"] + Fore.RED + f"{absent_count}" + ":\n")
+
+
+def get_html_structure(url, texts):
+    try:
+        response = requests.get(url)
+        html_content = response.text
+
+        # Encuentra el índice de inicio y fin del contenido del body
+        body_start_index = html_content.find("<body")
+        body_end_index = html_content.find("</body>") + len("</body>")
+
+        # Extraer las secciones requeridas del HTML
+        html_start = html_content[:body_start_index] if body_start_index != -1 else ""
+        body_tags = (
+            html_content[body_start_index:body_end_index]
+            if body_start_index != -1 and body_end_index != -1
+            else ""
+        )
+        html_end = html_content[body_end_index:] if body_end_index != -1 else ""
+
+        # Imprimir el título y luego las secciones del HTML
+        print(Fore.LIGHTBLUE_EX + texts["html_tags"] + "\n")
+        print(Fore.LIGHTBLACK_EX + html_start + body_tags + html_end)
+
+    except requests.exceptions.RequestException as e:
+        print(texts["html_tags_error"] + ": " + str(e))
 
 
 def load_texts(language_code):
@@ -142,6 +169,10 @@ def main():
     url = input(texts["enter_url"])
     cookie = input(texts["enter_cookie"])
     check_security_headers(url, cookie.strip() or None, texts)
+    # Obtener y mostrar la estructura HTML
+    get_html_structure(url, texts)
+
+    print("\n" + Fore.LIGHTCYAN_EX + texts["end_check"] + "\n")
 
 
 if __name__ == "__main__":
